@@ -1,5 +1,5 @@
 // import models
-const { json } = require('sequelize/types');
+// const { json } = require('sequelize/types');
 const Blogpost = require('./Blogpost');
 const Comment = require('./Comment');
 const User = require('./User');
