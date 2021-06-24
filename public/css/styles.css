@@ -1,0 +1,35 @@
+:root {
+  --main-color: #063f3a;
+  --secondary-color: #338a8d;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blog {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--main-color);
+}
+
+.blog h2 {
+  font-size: 1.5rem;
+}
+.blog p {
+  color: white;
+}
+header {
+  background: var(--main-color);
+  height: 60px;
+  margin-bottom: 10px;
+}
+.heading a {
+  color: white;
+}
+.heading a:hover{
+  color: var(--main-color);
+}
+
+.contents {
+  color: black;
+}
