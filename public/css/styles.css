@@ -7,16 +7,14 @@ a {
   text-decoration: none;
 }
 
-.blog {
-  background-color: var(--secondary-color);
-  border: 2px solid var(--main-color);
-}
-
 .blog h2 {
   font-size: 1.5rem;
 }
-.blog p {
-  color: white;
+
+.card,
+.form-border {
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
 }
 header {
   background: var(--main-color);
@@ -26,10 +24,27 @@ header {
 .heading a {
   color: white;
 }
-.heading a:hover{
+nav a:hover {
   color: var(--main-color);
 }
 
 .contents {
   color: black;
+}
+li {
+  display: inline;
+  color: black;
+}
+ul {
+  list-style-type: none;
+  margin: 5px 10px;
+  padding: 5px;
+}
+nav {
+  background: var(--secondary-color);
+}
+nav a {
+  margin-right: 25px;
+  color: white;
+  font-size: 1.2rem;
 }

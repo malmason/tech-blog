@@ -1,18 +1,17 @@
-{{#each blogs as |blog| }}
-<div class="row mb-3 blog">
-  <div class="col-md-5">
-    <h2 class="heading">
-      <a href="/blog/{{blog.id}}">{{blog.title}}</a>
-    </h2>
+<div class="row row-cols-1 row-cols-md-2 g-4 blog">
+  {{#each blogs as |blog| }}
+  <div class="col">
+    <div class="card mb-3 h-100">
+      <div class="card-body">
+        <h2 class="card-title">
+          <a href="/blog/{{blog.id}}">{{blog.title}}</a>
+        </h2>
+        <p class="contents">{{blog.contents}}</p>
+      </div>
+      <div class="card-footer text-end">
+        <p class="text-muted">Created by: {{user.name}} on {{format_date blog.date_created}}</p>
+      </div>
+    </div>
   </div>
-
-  <p>Created by: {{user.name}} on {{format_date blog.date_created}}</p>
-
-  <div class="col-md-7">
-    <p class="contents">
-      {{blog.contents}}
-    </p>
-  </div>
-
+  {{/each}}
 </div>
-{{/each}}
