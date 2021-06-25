@@ -48,3 +48,10 @@ nav a {
   color: white;
   font-size: 1.2rem;
 }
+.hidden {
+  display: none;
+}
+textarea {
+  height: 200px;
+  
+}  
