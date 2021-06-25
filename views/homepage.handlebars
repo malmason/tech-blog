@@ -13,5 +13,13 @@
       </div>
     </div>
   </div>
+  {{!-- Loop through the comments if any exist --}}
+    <ul class="list-group">
+      {{#if comments.length}}
+        {{#each comments as |comment|}}
+          <li class="list-group-item">{{comment.comment}}</li>
+        {{/each}}
+      {{/if}}
+    </ul>
   {{/each}}
 </div>
