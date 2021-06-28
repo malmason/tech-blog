@@ -23,7 +23,7 @@
 };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
+  if (event.target.hasAttribute('data-id') && event.target.id === "del-btn" ) {
     const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/blogs/${id}`, {
@@ -40,13 +40,12 @@ const delButtonHandler = async (event) => {
 
 const updateButtonHandler = async (event) => {
 
-  if (event.target.hasAttribute('data-id')) {
+  if (event.target.hasAttribute('data-id') && event.target.id === "update-btn") {
     const id = event.target.getAttribute('data-id');
     const title = document.querySelector(`#title-${id}`).value.trim();
     const contents = document.querySelector(`#blog-${id}`).value.trim();
    
-    console.log(id);
-    console.log(title);
+    console.log(event.target.id);
     const response = await fetch(`api/blogs/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ title, contents }),
