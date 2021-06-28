@@ -46,7 +46,9 @@ nav,
 .btn-comment {
   background: var(--secondary-color);
 }
-.blog-contents {
+.blog-contents,
+.comment-contents,
+.border-comment {
   border: 1px solid var(--secondary-color);
 }
 .blog-title {
@@ -66,5 +68,5 @@ textarea {
 .comment-footer {
   background: var(--main-color);
   color: white;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }

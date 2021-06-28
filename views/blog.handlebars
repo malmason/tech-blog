@@ -13,7 +13,7 @@
 <h3>Blog Comments</h3>
 <div class="col-md-6 comments">
   {{#each comments as |comment|}}
-    <div class="border mb-1">
+    <div class="border-comment mb-1">
       <p class="p-comment p-2">{{comment.comment}}</p>
       <div class="comment-footer text-light text-end">
         <p class="mb-0 px-2">Commented by: {{comment.user.name}} on {{format_date comment.date_created}}</p>
@@ -26,7 +26,7 @@
 
 {{#if logged_in}}
   <h4>Leave a comment</h4>
-  <div class="form border p-2">
+  <div class="form comment-contents p-2">
     <textarea class="form-control my-2 new-comment" style="height: 100px;">     
     </textarea>
     <div class="text-end">
