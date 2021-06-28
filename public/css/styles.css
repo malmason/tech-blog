@@ -40,8 +40,17 @@ ul {
   margin: 5px 10px;
   padding: 5px;
 }
-nav {
+nav,
+.blog-footer,
+.btn-post,
+.btn-comment {
   background: var(--secondary-color);
+}
+.blog-contents {
+  border: 1px solid var(--secondary-color);
+}
+.blog-title {
+  color: var(--secondary-color);
 }
 nav a {
   margin-right: 25px;
@@ -53,5 +62,7 @@ nav a {
 }
 textarea {
   height: 200px;
-  
-}  
+}
+.p-comment {
+  border-bottom: 1px solid var(--secondary-color);
+}

@@ -2,8 +2,8 @@
   <div class="col-6">
     <h3>Welcome, {{name}}!</h3>
   </div>
-  <div class="col-4">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#new-post">
+  <div class="col-4 text-end">
+    <button type="button" class="btn btn-post text-light" data-bs-toggle="modal" data-bs-target="#new-post">
   Create A New Post
     </button>
   </div>
@@ -31,7 +31,7 @@
             </div>
             <div class="modal-footer">
               <div class="form-group text-end">
-                <button type="submit" id="btnNew" class="btn btn-primary">Create</button>
+                <button type="submit" id="btnNew" class="btn btn-post text-light">Create</button>
               </div>
             </div>
           </form>
@@ -41,21 +41,24 @@
  
    <h4>Current Blog Posts</h4>
   {{#if blogposts.length}}
-  <div class="col-md-6 post-list">
+  <div class="col-md-10 post-list bg-light">
     {{#each blogposts as |blog|}}
     <div class="row mb-2">
-      <div class="form">
+      <div class="form border p-2">
         <div class="col-md-8">
-          <h5><a href="/blog/{{blog.id}}">{{blog.title}}</a></h5>
-          <textarea class="form-input form-control my-2" id="blog-{{blog.id}}">
+          <textarea id="title-{{blog.id}}" class="form-control" style="height: 70px; resize:none; overflow: hidden">
+            {{blog.title}}
+          </textarea>
+          <textarea class="form-control my-2" id="blog-{{blog.id}}" style="height: 100px; overflow: auto;">
             {{blog.contents}}
           </textarea> 
         </div>
         
-        <div class="col-md-4 text-center">
-          <button id="update-btn" class="btn btn-sm btn-warning text-start mx-2" data-id="{{blog.id}}">UPDATE</button>
-        
-          <button id="del-btn" class="btn btn-sm btn-danger text-end" data-id="{{blog.id}}">DELETE</button>
+        <div class="col-md-8 text-center my-2 d-grid gap-2">
+          <button id="update-btn" class="btn btn-post text-light" data-id="{{blog.id}}">UPDATE POST</button>
+        </div>
+        <div class="col-md-8 text-center d-grid gap-2">
+          <button id="del-btn" class="btn btn-secondary" data-id="{{blog.id}}">DELETE POST</button>
         </div>
       </div>
     </div>

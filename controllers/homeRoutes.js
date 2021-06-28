@@ -39,12 +39,21 @@ router.get('/blog/:id', async (req, res) => {
           attributes: ['name'],
         },
         {
-          model: Comment
+           model: Comment,
+           include:
+           [
+             {
+              model: User,
+             },
+           ],
         },
+        
       ],
     });
+    console.log(JSON.stringify(blogData));
     
     const blog = blogData.get({ plain: true });
+    console.log(blog);
     res.render('blog', {
       ...blog,
       logged_in: req.session.logged_in
