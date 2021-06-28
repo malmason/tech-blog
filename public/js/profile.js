@@ -28,10 +28,6 @@ const delButtonHandler = async (event) => {
 
     const response = await fetch(`/api/blogs/${id}`, {
       method: 'DELETE',
-      body: JSON.stringify({ id }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
     });
 
     if (response.ok) {
@@ -49,6 +45,8 @@ const updateButtonHandler = async (event) => {
     const title = document.querySelector(`#title-${id}`).value.trim();
     const contents = document.querySelector(`#blog-${id}`).value.trim();
    
+    console.log(id);
+    console.log(title);
     const response = await fetch(`api/blogs/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ title, contents }),
@@ -70,9 +68,9 @@ document
   .addEventListener('click', newFormHandler);
 
 document
-  .querySelector('#del-btn')
+  .querySelector('.delete-list')
   .addEventListener('click', delButtonHandler);
 
 document
-  .querySelector('#update-btn')
+  .querySelector('.post-list')
   .addEventListener('click', updateButtonHandler);

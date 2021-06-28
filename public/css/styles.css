@@ -63,6 +63,8 @@ nav a {
 textarea {
   height: 200px;
 }
-.p-comment {
-  border-bottom: 1px solid var(--secondary-color);
+.comment-footer {
+  background: var(--main-color);
+  color: white;
+  font-size: .8rem;
 }
